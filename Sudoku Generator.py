@@ -50,7 +50,7 @@ def generator(gr1s,gr2s,gr3s):
 		options=getoptions(i[0],i[1])
 		if options==[]:
 			print"GENERATOR FAILED. PLEASE TRY AGAIN"
-		elif n>= 21:
+		elif n>= 15:
 			print""
 			return(cell.stage)
 		cell.stage[i[0]][i[1]]=randomValue(options)
@@ -68,10 +68,10 @@ def printer(stage1):
 				addit=str(stage[i][j])
 			printstr=printstr+ "| "+addit + "  "
 			if j == 2 or j ==5:
-				printstr+="          "
+				printstr+="#"
 		printstr+= "|\n"
 		if i == 2 or i == 5:
-			printstr+= "__________________________________________________________________________ \n"
+			printstr+= "# # # # # # # # # # # # # # # # # # # # # # # # #  \n"
 	print printstr
 	print          "___________________________________________________________________________"
 def getoptions(i,j):
